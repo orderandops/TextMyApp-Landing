@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { 
   MessageSquare, 
   Smartphone, 
@@ -64,21 +63,13 @@ export default function Home() {
             <button onClick={() => scrollToSection('benefits')} className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? 'text-foreground/80' : 'text-white/90'}`}>Benefits</button>
             <button onClick={() => scrollToSection('pricing')} className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? 'text-foreground/80' : 'text-white/90'}`}>Pricing</button>
             
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6" data-testid="button-nav-cta">
-                  Get Early Access
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-md">
-                <DialogHeader>
-                  <DialogTitle className="text-2xl font-heading text-center">Join the Waitlist</DialogTitle>
-                </DialogHeader>
-                <div className="mt-4">
-                  <WaitlistForm />
-                </div>
-              </DialogContent>
-            </Dialog>
+            <Button 
+              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6" 
+              onClick={() => scrollToSection('signup-section')}
+              data-testid="button-nav-cta"
+            >
+              Sign-up Now
+            </Button>
           </nav>
 
           {/* Mobile Menu Toggle */}
@@ -101,21 +92,12 @@ export default function Home() {
             <button onClick={() => scrollToSection('how-it-works')} className="text-left text-foreground/80 font-medium py-2">How It Works</button>
             <button onClick={() => scrollToSection('benefits')} className="text-left text-foreground/80 font-medium py-2">Benefits</button>
             <button onClick={() => scrollToSection('pricing')} className="text-left text-foreground/80 font-medium py-2">Pricing</button>
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button className="bg-accent hover:bg-accent/90 text-accent-foreground w-full font-semibold mt-2">
-                  Get Early Access
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-[425px] w-[95vw]">
-                <DialogHeader>
-                  <DialogTitle className="text-2xl font-heading text-center">Join the Waitlist</DialogTitle>
-                </DialogHeader>
-                <div className="mt-4">
-                  <WaitlistForm />
-                </div>
-              </DialogContent>
-            </Dialog>
+            <Button 
+              className="bg-accent hover:bg-accent/90 text-accent-foreground w-full font-semibold mt-2"
+              onClick={() => scrollToSection('signup-section')}
+            >
+              Sign-up Now
+            </Button>
           </div>
         )}
       </header>
@@ -134,7 +116,7 @@ export default function Home() {
             <div className="text-white max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-700">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-sm font-medium mb-6">
                 <span className="flex h-2 w-2 rounded-full bg-secondary"></span>
-                Built for Construction & Trades
+                Built for Construction, Trades & Manufacturing
               </div>
               
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-heading leading-[1.1] mb-6 tracking-tight">
@@ -147,21 +129,14 @@ export default function Home() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg h-14 px-8 font-semibold shadow-lg shadow-accent/20" data-testid="button-hero-primary">
-                      Get Early Access
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="sm:max-w-md">
-                    <DialogHeader>
-                      <DialogTitle className="text-2xl font-heading text-center">Join the Waitlist</DialogTitle>
-                    </DialogHeader>
-                    <div className="mt-4">
-                      <WaitlistForm />
-                    </div>
-                  </DialogContent>
-                </Dialog>
+                <Button 
+                  size="lg" 
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg h-14 px-8 font-semibold shadow-lg shadow-accent/20" 
+                  onClick={() => scrollToSection('signup-section')}
+                  data-testid="button-hero-primary"
+                >
+                  Sign-up Now
+                </Button>
                 
                 <Button 
                   size="lg" 
@@ -182,7 +157,7 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
-                <p>Join 500+ companies on the waitlist</p>
+                <p>Join 500+ companies already signing up</p>
               </div>
             </div>
             
@@ -223,7 +198,7 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold font-heading text-foreground mb-4">Hiring is harder than ever.</h2>
-            <p className="text-lg text-muted-foreground">Traditional application processes are broken for blue-collar and trades workers.</p>
+            <p className="text-lg text-muted-foreground">Traditional application processes are broken for blue-collar, trades, and manufacturing workers.</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -231,7 +206,7 @@ export default function Home() {
               {
                 icon: <Smartphone className="w-8 h-8 text-destructive" />,
                 title: "Massive Drop-off",
-                desc: "Blue-collar workers won't complete clunky online job applications or long web forms."
+                desc: "Workers won't complete clunky online job applications or long web forms."
               },
               {
                 icon: <Clock className="w-8 h-8 text-destructive" />,
@@ -276,7 +251,7 @@ export default function Home() {
                 Complete applications via natural SMS conversation.
               </h2>
               <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
-                Workers simply text a job code to your dedicated number. They complete the entire application through an AI-powered text chat—in English or Spanish. No app to download.
+                Workers simply text a job code to your dedicated number. They complete the entire application through an AI-powered text chat—in English, Spanish, or other languages. No app to download.
               </p>
               
               <div className="space-y-8">
@@ -384,7 +359,7 @@ export default function Home() {
       <section id="benefits" className="py-24 bg-slate-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold font-heading text-foreground mb-4">Why top contractors choose us</h2>
+            <h2 className="text-3xl md:text-4xl font-bold font-heading text-foreground mb-4">Why top contractors and manufacturers choose us</h2>
             <p className="text-lg text-muted-foreground">Eliminate hiring friction and fill positions with qualified workers faster.</p>
           </div>
           
@@ -398,7 +373,7 @@ export default function Home() {
               {
                 icon: <Globe2 className="w-6 h-6" />,
                 title: "Remove Language Barriers",
-                desc: "Our AI naturally handles English and Spanish, opening up a massive untappped talent pool."
+                desc: "Our AI naturally handles English and Spanish (with more languages coming soon!), opening up a massive untapped talent pool."
               },
               {
                 icon: <Clock className="w-6 h-6" />,
@@ -433,8 +408,8 @@ export default function Home() {
               <div className="flex justify-center mb-4">
                 <CheckCircle2 className="w-10 h-10 text-secondary" />
               </div>
-              <h3 className="text-xl font-bold font-heading mb-2">Built for Trades</h3>
-              <p className="text-white/80">Specifically designed for construction, HVAC, plumbing, and electrical hiring.</p>
+              <h3 className="text-xl font-bold font-heading mb-2">Built for the Trades</h3>
+              <p className="text-white/80">Specifically designed for construction, manufacturing, HVAC, plumbing, and electrical hiring.</p>
             </div>
             <div className="p-6">
               <div className="flex justify-center mb-4">
@@ -459,7 +434,7 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-block px-4 py-1.5 rounded-full bg-accent/20 text-amber-700 font-bold text-sm mb-4">
-              Early Access — 25% Off
+              Sign Up Pricing — 25% Off
             </div>
             <h2 className="text-3xl md:text-5xl font-bold font-heading text-foreground mb-4">Simple, transparent pricing</h2>
             <p className="text-lg text-muted-foreground">Monthly billing. Cancel anytime. 30-day money-back guarantee.</p>
@@ -495,17 +470,14 @@ export default function Home() {
                   </li>
                 </ul>
                 
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button variant="outline" className="w-full" data-testid="button-pricing-starter">Join Waitlist</Button>
-                  </DialogTrigger>
-                  <DialogContent className="sm:max-w-md">
-                    <DialogHeader>
-                      <DialogTitle className="text-2xl font-heading text-center">Join the Waitlist</DialogTitle>
-                    </DialogHeader>
-                    <div className="mt-4"><WaitlistForm /></div>
-                  </DialogContent>
-                </Dialog>
+                <Button 
+                  variant="outline" 
+                  className="w-full" 
+                  data-testid="button-pricing-starter"
+                  onClick={() => scrollToSection('signup-section')}
+                >
+                  Sign-up Now
+                </Button>
               </CardContent>
             </Card>
 
@@ -537,7 +509,7 @@ export default function Home() {
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
-                    <span className="font-semibold text-white">Multilingual (English/Spanish)</span>
+                    <span className="font-semibold text-white">Multilingual (English/Spanish+)</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
@@ -545,19 +517,13 @@ export default function Home() {
                   </li>
                 </ul>
                 
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold" data-testid="button-pricing-pro">
-                      Get Early Access
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="sm:max-w-md text-foreground">
-                    <DialogHeader>
-                      <DialogTitle className="text-2xl font-heading text-center">Join the Waitlist</DialogTitle>
-                    </DialogHeader>
-                    <div className="mt-4"><WaitlistForm /></div>
-                  </DialogContent>
-                </Dialog>
+                <Button 
+                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold" 
+                  data-testid="button-pricing-pro"
+                  onClick={() => scrollToSection('signup-section')}
+                >
+                  Sign-up Now
+                </Button>
               </CardContent>
             </Card>
 
@@ -594,46 +560,33 @@ export default function Home() {
                   </li>
                 </ul>
                 
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button variant="outline" className="w-full" data-testid="button-pricing-business">Contact Sales</Button>
-                  </DialogTrigger>
-                  <DialogContent className="sm:max-w-md">
-                    <DialogHeader>
-                      <DialogTitle className="text-2xl font-heading text-center">Join the Waitlist</DialogTitle>
-                    </DialogHeader>
-                    <div className="mt-4"><WaitlistForm /></div>
-                  </DialogContent>
-                </Dialog>
+                <Button 
+                  variant="outline" 
+                  className="w-full" 
+                  data-testid="button-pricing-business"
+                  onClick={() => scrollToSection('signup-section')}
+                >
+                  Contact Sales
+                </Button>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-br from-primary to-slate-900 relative overflow-hidden">
+      {/* CTA / Signup Section inline instead of popup */}
+      <section id="signup-section" className="py-24 bg-gradient-to-br from-primary to-slate-900 relative overflow-hidden scroll-mt-20">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 z-0"></div>
-        <div className="container mx-auto px-4 relative z-10 text-center">
+        <div className="container mx-auto px-4 relative z-10 flex flex-col items-center text-center">
           <h2 className="text-4xl md:text-5xl font-bold font-heading text-white mb-6">Stop losing candidates to clunky forms.</h2>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto mb-10">
-            Join the waitlist today to get 25% off early access pricing and start filling your open roles faster.
+          <p className="text-xl text-white/80 max-w-2xl mx-auto mb-12">
+            Sign up today to get 25% off pricing and start filling your open roles faster.
           </p>
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg h-14 px-10 font-bold shadow-xl" data-testid="button-bottom-cta">
-                Get Early Access Now
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="sm:max-w-md">
-              <DialogHeader>
-                <DialogTitle className="text-2xl font-heading text-center">Join the Waitlist</DialogTitle>
-              </DialogHeader>
-              <div className="mt-4">
-                <WaitlistForm />
-              </div>
-            </DialogContent>
-          </Dialog>
+          
+          <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full text-left">
+            <h3 className="text-2xl font-bold font-heading text-foreground mb-6 text-center">Sign-up Now</h3>
+            <WaitlistForm />
+          </div>
         </div>
       </section>
 
@@ -651,7 +604,7 @@ export default function Home() {
               <p className="text-sm max-w-xs mb-4">
                 The only text-to-apply that actually completes the application—no links, no forms, no drop-off.
               </p>
-              <p className="text-sm">A product by <strong className="text-slate-300">O&O Consulting</strong></p>
+              <p className="text-sm">A product by <strong className="text-slate-300">Order and Operations Consulting</strong></p>
             </div>
             
             <div>
@@ -671,7 +624,7 @@ export default function Home() {
           </div>
           
           <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-sm">
-            <p>&copy; 2025 O&O Consulting. All rights reserved.</p>
+            <p>&copy; 2026 Order and Operations Consulting. All rights reserved.</p>
           </div>
         </div>
       </footer>

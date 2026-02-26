@@ -93,7 +93,7 @@ export function WaitlistForm() {
             Joining...
           </>
         ) : (
-          "Join the Waitlist"
+          "Sign-up Now"
         )}
       </Button>
       <p className="text-xs text-center text-muted-foreground mt-4">
