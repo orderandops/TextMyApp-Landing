@@ -1,0 +1,96 @@
+Build a modern, high-converting landing page for TextMyApp — a SaaS product that lets job applicants complete an entire job application via SMS text message. No links, no forms, no drop-off.
+
+## Target Audience
+- Construction subcontractors and trades employers (electrical, plumbing, HVAC, concrete, drywall, roofing)
+- Small to mid-size companies (5-100 employees)
+- HR leaders, talent acquisition, or owners who handle hiring
+- Struggling to hire blue-collar workers, especially non-English speakers
+
+## Key Messaging
+
+### Headline
+"Hire faster. Just text."
+
+### Subheadline
+"The only text-to-apply that actually completes the application—no links, no forms, no drop-off."
+
+### The Problem (Section)
+- Blue-collar workers won't complete online job applications
+- Paper apps, "call to apply," and QR codes to clunky forms have massive drop-off
+- Non-English speakers face language barriers on English-only job sites
+- Every unfilled position costs $300-500+/day in project delays
+
+### The Solution (Section)
+Workers text a job code (e.g., "Text WELDER123 to 555-123-4567") and complete their entire application through a natural, AI-powered SMS conversation—in English or Spanish. No links to click, no forms to fill out, no app to download. Applications push directly to your applicant tracking system.
+
+### How It Works (3 Steps)
+1. **Create a Job Code** — Set up a keyword for each role (e.g., LABOR123, WELDER456)
+2. **Workers Text to Apply** — They text your code and complete the application via SMS in their language
+3. **Applications Land in Your ATS** — Candidate info syncs automatically—no manual entry
+
+### Key Benefits (4 Cards or Icons)
+1. **Capture More Candidates** — Reach workers who won't complete online forms
+2. **Remove Language Barriers** — AI chatbot works in English and Spanish
+3. **Fill Roles Faster** — Applications in minutes, not days
+4. **Works With Your ATS** — Integrates with your existing applicant tracking system
+
+### Social Proof / Trust Section
+- "Built for construction and trades hiring"
+- "TCPA-compliant, carrier-registered messaging"
+- "30-day money-back guarantee"
+- (Leave placeholder for testimonials once we have customers)
+
+### Pricing Section
+**Early Access Pricing — 25% Off**
+
+| Tier | Price | Includes |
+|------|-------|----------|
+| Starter | $59/mo (normally $79) | 2 job codes, 50 apps/mo, 1 ATS integration, email support |
+| Pro (Most Popular) | $112/mo (normally $149) | 5 job codes, 150 apps/mo, 2 ATS integrations, multilingual, priority support |
+| Business | $224/mo (normally $299) | Unlimited job codes & apps, all ATS integrations, phone support, custom onboarding |
+
+All plans: Monthly billing, cancel anytime, 30-day money-back guarantee.
+
+### CTA
+Primary: "Get Early Access" → opens email capture form (or modal)
+Secondary: "See How It Works" → scrolls to How It Works section
+
+### Email Capture
+Collect: Email address
+Optional: Company name, approximate number of employees (dropdown: 1-10, 11-25, 26-50, 51-100, 100+)
+Button text: "Join the Waitlist"
+Success message: "You're on the list! We'll reach out soon with early access details."
+
+Use Formspree, ConvertKit, or a simple mailto fallback for the form submission.
+
+### Footer
+- Product: TextMyApp
+- Company: O&O Consulting
+- Contact: hello@orderandoperations.com
+- Links: Privacy Policy (placeholder), Terms of Service (placeholder)
+- © 2025 O&O Consulting. All rights reserved.
+
+## Design Requirements
+- Modern, clean, professional—not generic SaaS template
+- Mobile-first (many visitors will be on phones)
+- Color palette: Blues and greens (trust, growth) with high-contrast CTAs (orange or yellow)
+- Use icons or simple illustrations for the How It Works and Benefits sections
+- Include a hero image or illustration showing a worker texting on a phone at a job site (can use placeholder)
+- Fast-loading, no heavy frameworks unless necessary
+- Sticky header with CTA button visible on scroll
+
+## Tech Stack
+- HTML/CSS/JS (vanilla) or React if needed
+- Tailwind CSS preferred for styling
+- Formspree for email capture (or suggest alternative)
+- Deploy on Replit
+
+## Pages
+- Single landing page (no multi-page site needed)
+- Anchor links for sections: #how-it-works, #benefits, #pricing, #contact
+
+## Do NOT include
+- References to specific ATS vendors (no "integrates with Greenhouse" etc.)
+- Chat widgets or live chat
+- Blog or resources section (not needed yet)
+- Login/signup functionality (just email capture for now)
