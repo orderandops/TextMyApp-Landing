@@ -552,7 +552,7 @@ export default function Home() {
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
-                    <span>All ATS integrations</span>
+                    <span>ATS integration capable</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
