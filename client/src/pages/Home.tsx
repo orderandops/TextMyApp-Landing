@@ -14,8 +14,6 @@ import {
   X,
   Calendar
 } from "lucide-react";
-import { WaitlistForm } from "@/components/WaitlistForm";
-
 // Using the generated image
 import heroWorkerImage from "@/assets/images/hero-worker.png";
 
@@ -603,7 +601,7 @@ export default function Home() {
           
           <Button
             size="lg"
-            className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg h-14 px-10 font-bold shadow-xl mb-12"
+            className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg h-14 px-10 font-bold shadow-xl"
             asChild
             data-testid="button-bottom-cta"
           >
@@ -612,13 +610,6 @@ export default function Home() {
               Schedule Live Demo
             </a>
           </Button>
-
-          <div className="w-full max-w-md">
-            <p className="text-white/60 text-sm mb-4">Or sign up to join our waitlist:</p>
-            <div className="bg-white rounded-2xl shadow-2xl p-8 text-left">
-              <WaitlistForm />
-            </div>
-          </div>
         </div>
       </section>
 
