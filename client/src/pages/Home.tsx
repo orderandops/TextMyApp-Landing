@@ -278,8 +278,8 @@ export default function Home() {
                   },
                   {
                     step: "3",
-                    title: "Applications Land in Your ATS",
-                    desc: "Candidate info, experience, and answers sync automatically. No manual data entry required."
+                    title: "Applications Land Where You Need Them",
+                    desc: "Candidate info syncs automatically — export to a SharePoint list, Google Sheet, your ATS, or another internal workflow. No manual data entry required."
                   }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4">
@@ -392,8 +392,8 @@ export default function Home() {
               },
               {
                 icon: <Database className="w-6 h-6" />,
-                title: "Works With Your ATS",
-                desc: "Integrates seamlessly with your existing applicant tracking system. No new software to learn."
+                title: "Flexible Export & Integration",
+                desc: "ATS integration capable — plus export to a SharePoint list, Google Sheet, or your own internal workflow. No new software to learn."
               }
             ].map((benefit, i) => (
               <div key={i} className="flex gap-6 bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:border-primary/20 hover:shadow-md transition-all">
@@ -472,7 +472,7 @@ export default function Home() {
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
-                    <span>1 ATS integration</span>
+                    <span>ATS integration capable</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
@@ -517,7 +517,7 @@ export default function Home() {
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
-                    <span>2 ATS integrations</span>
+                    <span>ATS integration capable</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
