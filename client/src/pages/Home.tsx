@@ -159,16 +159,6 @@ export default function Home() {
                 </Button>
               </div>
               
-              <div className="mt-8 flex items-center gap-4 text-sm text-white/60">
-                <div className="flex -space-x-2">
-                  {[1, 2, 3, 4].map(i => (
-                    <div key={i} className="w-8 h-8 rounded-full bg-slate-300 border-2 border-primary flex items-center justify-center text-xs font-bold text-slate-700">
-                      {String.fromCharCode(64 + i)}
-                    </div>
-                  ))}
-                </div>
-                <p>Join 500+ companies already signing up</p>
-              </div>
             </div>
             
             {/* Hero Image / Illustration */}
