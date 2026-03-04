@@ -11,12 +11,15 @@ import {
   Zap, 
   CheckCircle2,
   Menu,
-  X
+  X,
+  Calendar
 } from "lucide-react";
 import { WaitlistForm } from "@/components/WaitlistForm";
 
 // Using the generated image
 import heroWorkerImage from "@/assets/images/hero-worker.png";
+
+const CALENDLY_URL = "https://calendly.com/darcie-orderandoperations/textmyapp-product-demo";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -65,10 +68,13 @@ export default function Home() {
             
             <Button 
               className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6" 
-              onClick={() => scrollToSection('signup-section')}
+              asChild
               data-testid="button-nav-cta"
             >
-              Sign-up Now
+              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+                <Calendar className="w-4 h-4 mr-2" />
+                Schedule Live Demo
+              </a>
             </Button>
           </nav>
 
@@ -94,9 +100,12 @@ export default function Home() {
             <button onClick={() => scrollToSection('pricing')} className="text-left text-foreground/80 font-medium py-2">Pricing</button>
             <Button 
               className="bg-accent hover:bg-accent/90 text-accent-foreground w-full font-semibold mt-2"
-              onClick={() => scrollToSection('signup-section')}
+              asChild
             >
-              Sign-up Now
+              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+                <Calendar className="w-4 h-4 mr-2" />
+                Schedule Live Demo
+              </a>
             </Button>
           </div>
         )}
@@ -132,10 +141,13 @@ export default function Home() {
                 <Button 
                   size="lg" 
                   className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg h-14 px-8 font-semibold shadow-lg shadow-accent/20" 
-                  onClick={() => scrollToSection('signup-section')}
+                  asChild
                   data-testid="button-hero-primary"
                 >
-                  Sign-up Now
+                  <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+                    <Calendar className="w-5 h-5 mr-2" />
+                    Schedule Live Demo
+                  </a>
                 </Button>
                 
                 <Button 
@@ -474,9 +486,11 @@ export default function Home() {
                   variant="outline" 
                   className="w-full" 
                   data-testid="button-pricing-starter"
-                  onClick={() => scrollToSection('signup-section')}
+                  asChild
                 >
-                  Sign-up Now
+                  <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+                    Schedule Live Demo
+                  </a>
                 </Button>
               </CardContent>
             </Card>
@@ -520,9 +534,11 @@ export default function Home() {
                 <Button 
                   className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold" 
                   data-testid="button-pricing-pro"
-                  onClick={() => scrollToSection('signup-section')}
+                  asChild
                 >
-                  Sign-up Now
+                  <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+                    Schedule Live Demo
+                  </a>
                 </Button>
               </CardContent>
             </Card>
@@ -564,9 +580,11 @@ export default function Home() {
                   variant="outline" 
                   className="w-full" 
                   data-testid="button-pricing-business"
-                  onClick={() => scrollToSection('signup-section')}
+                  asChild
                 >
-                  Contact Sales
+                  <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+                    Schedule Live Demo
+                  </a>
                 </Button>
               </CardContent>
             </Card>
@@ -579,13 +597,27 @@ export default function Home() {
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 z-0"></div>
         <div className="container mx-auto px-4 relative z-10 flex flex-col items-center text-center">
           <h2 className="text-4xl md:text-5xl font-bold font-heading text-white mb-6">Stop losing candidates to clunky forms.</h2>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto mb-12">
-            Sign up today to get 25% off pricing and start filling your open roles faster.
+          <p className="text-xl text-white/80 max-w-2xl mx-auto mb-8">
+            See TextMyApp in action. Schedule a personalized demo and start filling your open roles faster.
           </p>
           
-          <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full text-left">
-            <h3 className="text-2xl font-bold font-heading text-foreground mb-6 text-center">Sign-up Now</h3>
-            <WaitlistForm />
+          <Button
+            size="lg"
+            className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg h-14 px-10 font-bold shadow-xl mb-12"
+            asChild
+            data-testid="button-bottom-cta"
+          >
+            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+              <Calendar className="w-5 h-5 mr-2" />
+              Schedule Live Demo
+            </a>
+          </Button>
+
+          <div className="w-full max-w-md">
+            <p className="text-white/60 text-sm mb-4">Or sign up to join our waitlist:</p>
+            <div className="bg-white rounded-2xl shadow-2xl p-8 text-left">
+              <WaitlistForm />
+            </div>
           </div>
         </div>
       </section>
