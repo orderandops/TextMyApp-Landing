@@ -433,40 +433,35 @@ export default function Home() {
       <section id="pricing" className="py-24 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-block px-4 py-1.5 rounded-full bg-accent/20 text-amber-700 font-bold text-sm mb-4">
-              Sign Up Pricing — 25% Off
+            <div className="inline-block px-4 py-1.5 rounded-full bg-accent/20 text-amber-700 font-bold text-sm mb-4 uppercase tracking-wider">
+              Pricing
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold font-heading text-foreground mb-4">Simple, transparent pricing</h2>
-            <p className="text-lg text-muted-foreground">Monthly billing. Cancel anytime. 30-day money-back guarantee.</p>
+            <h2 className="text-3xl md:text-5xl font-bold font-heading text-foreground mb-4">Simple, Transparent Pricing — Save 20% Annually</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto items-start">
             {/* Starter Tier */}
-            <Card className="border-slate-200 shadow-sm mt-8">
+            <Card className="border-slate-200 shadow-sm">
               <CardContent className="p-8">
                 <h3 className="text-xl font-bold font-heading mb-2">Starter</h3>
-                <div className="flex items-baseline gap-2 mb-2">
-                  <span className="text-4xl font-bold">$59</span>
+                <div className="flex items-baseline gap-1 mb-1">
+                  <span className="text-5xl font-bold text-accent">$79</span>
                   <span className="text-muted-foreground">/mo</span>
                 </div>
-                <p className="text-sm text-muted-foreground line-through mb-6">Normally $79/mo</p>
+                <p className="text-sm text-accent font-semibold mb-6">or $63/mo billed annually</p>
                 
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
-                    <span>2 job codes</span>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-accent shrink-0" />
+                    <span>50 applications/month</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
-                    <span>50 applications / month</span>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-accent shrink-0" />
+                    <span>1 flow</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
-                    <span>ATS integration capable</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
-                    <span>Email support</span>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-accent shrink-0" />
+                    <span>1 team seat</span>
                   </li>
                 </ul>
                 
@@ -483,45 +478,37 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            {/* Pro Tier */}
-            <Card className="border-primary shadow-xl relative z-10 scale-105 bg-slate-900 text-white">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-accent text-accent-foreground font-bold text-xs uppercase tracking-wider py-1 px-4 rounded-full">
+            {/* Growth Tier */}
+            <Card className="border-2 border-accent shadow-xl relative z-10">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-accent text-white font-bold text-xs uppercase tracking-wider py-1 px-4 rounded-full">
                 Most Popular
               </div>
               <CardContent className="p-8">
-                <h3 className="text-xl font-bold font-heading mb-2">Pro</h3>
-                <div className="flex items-baseline gap-2 mb-2">
-                  <span className="text-5xl font-bold text-white">$112</span>
-                  <span className="text-white/70">/mo</span>
+                <h3 className="text-xl font-bold font-heading mb-2">Growth</h3>
+                <div className="flex items-baseline gap-1 mb-1">
+                  <span className="text-5xl font-bold text-accent">$149</span>
+                  <span className="text-muted-foreground">/mo</span>
                 </div>
-                <p className="text-sm text-white/50 line-through mb-6">Normally $149/mo</p>
+                <p className="text-sm text-accent font-semibold mb-6">or $119/mo billed annually</p>
                 
-                <ul className="space-y-4 mb-8 text-white/90">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
-                    <span>5 job codes</span>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-accent shrink-0" />
+                    <span>150 applications/month</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
-                    <span>150 applications / month</span>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-accent shrink-0" />
+                    <span>3 flows</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
-                    <span>ATS integration capable</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
-                    <span className="font-semibold text-white">Multilingual (English/Spanish+)</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
-                    <span>Priority support</span>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-accent shrink-0" />
+                    <span>2 team seats</span>
                   </li>
                 </ul>
                 
                 <Button 
-                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold" 
-                  data-testid="button-pricing-pro"
+                  className="w-full bg-accent hover:bg-accent/90 text-white font-bold" 
+                  data-testid="button-pricing-growth"
                   asChild
                 >
                   <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
@@ -531,43 +518,39 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            {/* Business Tier */}
-            <Card className="border-slate-200 shadow-sm mt-8">
+            {/* Pro Tier */}
+            <Card className="border-slate-200 shadow-sm">
               <CardContent className="p-8">
-                <h3 className="text-xl font-bold font-heading mb-2">Business</h3>
-                <div className="flex items-baseline gap-2 mb-2">
-                  <span className="text-4xl font-bold">$224</span>
+                <h3 className="text-xl font-bold font-heading mb-2">Pro</h3>
+                <div className="flex items-baseline gap-1 mb-1">
+                  <span className="text-5xl font-bold text-accent">$299</span>
                   <span className="text-muted-foreground">/mo</span>
                 </div>
-                <p className="text-sm text-muted-foreground line-through mb-6">Normally $299/mo</p>
+                <p className="text-sm text-accent font-semibold mb-6">or $239/mo billed annually</p>
                 
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
-                    <span>Unlimited job codes</span>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-accent shrink-0" />
+                    <span>500 applications/month</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
-                    <span>Unlimited applications</span>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-accent shrink-0" />
+                    <span>5 flows</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
-                    <span>ATS integration capable</span>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-accent shrink-0" />
+                    <span>5 team seats</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
-                    <span>Multilingual</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
-                    <span>Phone support & custom onboarding</span>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-accent shrink-0" />
+                    <span>Priority support</span>
                   </li>
                 </ul>
                 
                 <Button 
                   variant="outline" 
                   className="w-full" 
-                  data-testid="button-pricing-business"
+                  data-testid="button-pricing-pro"
                   asChild
                 >
                   <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
@@ -577,6 +560,8 @@ export default function Home() {
               </CardContent>
             </Card>
           </div>
+
+          <p className="text-center text-sm text-muted-foreground mt-8">Add-ons: Extra flow or extra seat — $19/mo each</p>
         </div>
       </section>
 
