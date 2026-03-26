@@ -25,7 +25,7 @@ const CALENDLY_URL = "https://calendly.com/darcie-orderandoperations/textmyapp-p
 
 function Logo() {
   return (
-    <img src={logoImage} alt="TextMyApp" className="h-10 w-auto" />
+    <img src={logoImage} alt="TextMyApp" className="h-[200px] w-auto" />
   );
 }
 
@@ -86,7 +86,7 @@ export default function Home() {
       </header>
 
       {/* ── Hero ── */}
-      <section className="pt-32 pb-20 md:pt-44 md:pb-28 bg-white relative overflow-hidden">
+      <section className="pt-[280px] pb-20 md:pt-[300px] md:pb-28 bg-white relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-50 pointer-events-none" />
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-slate-50 to-transparent pointer-events-none" />
 
