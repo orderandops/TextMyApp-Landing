@@ -19,25 +19,13 @@ import {
   BadgeCheck
 } from "lucide-react";
 import heroWorkerImage from "@/assets/images/hero-worker.png";
+import logoImage from "@/assets/images/textmyapp-logo.png";
 
 const CALENDLY_URL = "https://calendly.com/darcie-orderandoperations/textmyapp-product-demo";
 
-function Logo({ dark = false }: { dark?: boolean }) {
+function Logo() {
   return (
-    <div className="flex items-center gap-2.5">
-      <div className="relative w-10 h-10 flex-shrink-0">
-        <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center shadow-sm">
-          <div className="flex flex-col items-center leading-none">
-            <span className="text-white font-heading font-black text-[9px] tracking-tight">TEXT</span>
-            <span className="text-white font-heading font-black text-[9px] tracking-tight">MY APP</span>
-          </div>
-        </div>
-        <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-3 h-2 bg-accent clip-speech"></div>
-      </div>
-      <span className={`font-heading font-bold text-xl tracking-tight ${dark ? 'text-primary' : 'text-primary'}`}>
-        TextMyApp
-      </span>
-    </div>
+    <img src={logoImage} alt="TextMyApp" className="h-10 w-auto" />
   );
 }
 
@@ -459,14 +447,8 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div className="col-span-1 md:col-span-2">
-              <div className="flex items-center gap-2.5 mb-4">
-                <div className="w-9 h-9 bg-accent rounded-lg flex items-center justify-center">
-                  <div className="flex flex-col items-center leading-none">
-                    <span className="text-white font-heading font-black text-[8px] tracking-tight">TEXT</span>
-                    <span className="text-white font-heading font-black text-[8px] tracking-tight">MY APP</span>
-                  </div>
-                </div>
-                <span className="font-heading font-bold text-lg text-white">TextMyApp</span>
+              <div className="mb-4">
+                <img src={logoImage} alt="TextMyApp" className="h-9 w-auto brightness-0 invert" />
               </div>
               <p className="text-sm max-w-xs mb-4 leading-relaxed">
                 The only text-to-apply that actually completes the application — no links, no forms, no drop-off.

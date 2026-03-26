@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoImage from "@/assets/images/textmyapp-logo.png";
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -18,15 +19,7 @@ export default function TermsConditions() {
       {/* Header */}
       <header className="bg-primary text-white py-4 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 bg-accent rounded-lg flex items-center justify-center">
-              <div className="flex flex-col items-center leading-none">
-                <span className="text-white font-heading font-black text-[8px] tracking-tight">TEXT</span>
-                <span className="text-white font-heading font-black text-[8px] tracking-tight">MY APP</span>
-              </div>
-            </div>
-            <span className="font-heading font-bold text-lg text-white">TextMyApp</span>
-          </div>
+          <img src={logoImage} alt="TextMyApp" className="h-9 w-auto brightness-0 invert" />
           <Button variant="ghost" className="text-white hover:bg-white/10 hover:text-white gap-2" asChild>
             <Link href="/">
               <ArrowLeft className="w-4 h-4" />
