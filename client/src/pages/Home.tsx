@@ -25,7 +25,7 @@ const CALENDLY_URL = "https://calendly.com/darcie-orderandoperations/textmyapp-p
 
 function Logo() {
   return (
-    <img src={logoImage} alt="TextMyApp" className="h-[200px] w-auto" />
+    <img src={logoImage} alt="TextMyApp" className="h-[150px] w-auto" />
   );
 }
 
@@ -49,7 +49,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col font-sans bg-white">
 
       {/* ── Sticky Header ── */}
-      <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-sm border-b border-slate-100 py-3" : "bg-white/95 backdrop-blur py-4"}`}>
+      <header className="fixed top-0 w-full z-50 bg-white shadow-sm border-b border-slate-100">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <Logo dark />
 
@@ -86,7 +86,7 @@ export default function Home() {
       </header>
 
       {/* ── Hero ── */}
-      <section className="pt-[280px] pb-20 md:pt-[300px] md:pb-28 bg-white relative overflow-hidden">
+      <section className="pt-[200px] pb-20 md:pt-[220px] md:pb-28 bg-white relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-50 pointer-events-none" />
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-slate-50 to-transparent pointer-events-none" />
 
