@@ -37,35 +37,35 @@
 
 :root {
   --background: 0 0% 100%;
-  --foreground: 222 47% 11%;
+  --foreground: 215 40% 16%;
 
   --card: 0 0% 100%;
-  --card-foreground: 222 47% 11%;
+  --card-foreground: 215 40% 16%;
   
   --popover: 0 0% 100%;
-  --popover-foreground: 222 47% 11%;
+  --popover-foreground: 215 40% 16%;
 
-  /* Blues - Trust, Professionalism */
-  --primary: 221 83% 53%; 
-  --primary-foreground: 210 40% 98%;
+  /* Dark navy blue — matches the TextMyApp portal sidebar */
+  --primary: 215 42% 22%;
+  --primary-foreground: 0 0% 100%;
 
-  /* Greens - Growth, Success */
-  --secondary: 160 84% 39%;
+  /* Lighter blue for secondary accents */
+  --secondary: 215 42% 35%;
   --secondary-foreground: 0 0% 100%;
 
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
 
-  /* High contrast CTA - Orange/Amber */
-  --accent: 38 92% 50%;
+  /* Orange — matches the TextMyApp portal accent */
+  --accent: 25 95% 53%;
   --accent-foreground: 0 0% 100%;
 
-  --destructive: 0 84.2% 60.2%;
+  --destructive: 0 84% 60%;
   --destructive-foreground: 210 40% 98%;
 
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 221 83% 53%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 25 95% 53%;
 
   --radius: 0.5rem;
 }
@@ -75,14 +75,13 @@
     @apply border-border;
   }
   body {
-    @apply font-sans antialiased bg-background text-foreground selection:bg-primary/20;
+    @apply font-sans antialiased bg-background text-foreground selection:bg-accent/20;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading tracking-tight;
   }
 }
 
-/* Subtle pattern for background */
 .bg-grid-pattern {
   background-size: 40px 40px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),

@@ -1,0 +1,112 @@
+Terms and Conditions
+
+Last Updated: March 26, 2026
+
+These Terms and Conditions ("Terms") govern your use of the TextMyApp SMS job application service operated by Order and Operations Consulting LLC ("we," "us," or "our").
+
+By using TextMyApp, you agree to these Terms.
+
+
+Service Description
+
+TextMyApp is an SMS-based job application platform. Employers provide unique application codes to job seekers. Job seekers text their code to our phone number to complete a job application via text message. Applications are delivered to the respective employer.
+
+
+Eligibility
+
+You must be at least 16 years old to use TextMyApp. By using our service, you represent that you meet this requirement.
+
+
+SMS Terms and Consent
+
+By texting your application code to our number, you agree to the following:
+
+1. Consent to Receive Messages
+   You consent to receive recurring text messages from TextMyApp related to your job application.
+
+2. Message Frequency
+   Message frequency varies based on the application process, typically 5-10 messages per application.
+
+3. Message and Data Rates
+   Standard message and data rates may apply based on your mobile carrier plan.
+
+4. Opt-Out
+   You may opt out at any time by replying STOP to any message. You will receive a confirmation message and no further messages will be sent.
+
+5. Help
+   For assistance, reply HELP to any message or contact hello@orderandoperations.com.
+
+6. Carrier Liability
+   Carriers are not liable for delayed or undelivered messages.
+
+7. No Marketing Messages
+   We do not send promotional or marketing messages. All messages are related to your job application.
+
+
+User Responsibilities
+
+You agree to:
+
+- Provide accurate information during the application process
+- Not use the service for any unlawful purpose
+- Not impersonate another person
+- Not submit fraudulent applications
+
+
+Employer Relationship
+
+TextMyApp facilitates the delivery of your application to employers. We are not the employer and do not make hiring decisions. Any employment relationship is solely between you and the employer.
+
+We do not guarantee:
+
+- That you will receive a job offer
+- That employers will respond to your application
+- The accuracy of job listings or employer information
+
+
+Intellectual Property
+
+TextMyApp, including its name, logo, and service design, is the property of Order and Operations Consulting LLC. You may not use our branding without permission.
+
+
+Disclaimers
+
+THE SERVICE IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED.
+
+We do not warrant that:
+
+- The service will be uninterrupted or error-free
+- Messages will be delivered instantly
+- Applications will result in employment
+
+
+Limitation of Liability
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, ORDER AND OPERATIONS CONSULTING LLC SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM YOUR USE OF TEXTMYAPP.
+
+
+Indemnification
+
+You agree to indemnify and hold harmless Order and Operations Consulting LLC from any claims, damages, or expenses arising from your use of the service or violation of these Terms.
+
+
+Modifications
+
+We may update these Terms from time to time. Continued use of the service after changes constitutes acceptance of the updated Terms.
+
+
+Governing Law
+
+These Terms are governed by the laws of the State of North Carolina, without regard to conflict of law principles.
+
+
+Termination
+
+We reserve the right to terminate or suspend access to our service at any time, without notice, for conduct that we believe violates these Terms or is harmful to other users or employers.
+
+
+Contact Us
+
+Order and Operations Consulting LLC
+Email: hello@orderandoperations.com
+Website: https://textmyapp.com

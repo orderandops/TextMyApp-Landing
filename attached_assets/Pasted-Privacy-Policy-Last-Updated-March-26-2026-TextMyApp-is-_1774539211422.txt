@@ -1,0 +1,93 @@
+Privacy Policy
+
+Last Updated: March 26, 2026
+
+TextMyApp is operated by Order and Operations Consulting LLC ("we," "us," or "our"). This Privacy Policy describes how we collect, use, and protect your information when you use our SMS-based job application service.
+
+
+Information We Collect
+
+When you use TextMyApp, we collect:
+
+- Phone number (required to send and receive text messages)
+- Name (as provided by you during the application)
+- Email address (as provided by you during the application)
+- Job preferences (trade, location, and other application responses)
+- Language preference
+- Message history and timestamps
+
+
+How We Use Your Information
+
+We use your information to:
+
+- Facilitate job applications between you and employers
+- Send you text messages related to your application
+- Deliver your application information to the employer associated with your application code
+- Respond to your HELP or STOP requests
+- Improve our service
+
+
+SMS/Text Messaging
+
+By texting your application code to our number, you consent to receive recurring text messages from TextMyApp related to job applications.
+
+- Message frequency varies (typically 5-10 messages per application)
+- Message and data rates may apply
+- Reply STOP to cancel and stop receiving messages
+- Reply HELP for assistance
+- Carriers are not liable for delayed or undelivered messages
+
+We do not send marketing or promotional text messages. All messages are related to your job application.
+
+
+Information Sharing
+
+We share your application information with:
+
+- The employer associated with your application code (so they can review your application and contact you about job opportunities)
+
+We do NOT:
+
+- Sell your personal information
+- Share your phone number with third parties for marketing purposes
+- Use your information for purposes unrelated to job applications
+
+
+Data Retention
+
+We retain your application data for up to 12 months to facilitate potential employment opportunities. You may request deletion of your data by contacting us at hello@orderandoperations.com.
+
+
+Data Security
+
+We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
+
+
+Your Rights
+
+You have the right to:
+
+- Opt out of text messages at any time by replying STOP
+- Request access to your personal information
+- Request deletion of your personal information
+- Request correction of inaccurate information
+
+To exercise these rights, contact us at hello@orderandoperations.com.
+
+
+Children's Privacy
+
+TextMyApp is not intended for use by individuals under 16 years of age. We do not knowingly collect information from children.
+
+
+Changes to This Policy
+
+We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the updated policy on this page with a new "Last Updated" date.
+
+
+Contact Us
+
+Order and Operations Consulting LLC
+Email: hello@orderandoperations.com
+Website: https://textmyapp.com
