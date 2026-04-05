@@ -197,11 +197,11 @@ export default function Home() {
                 Complete applications via natural SMS conversation.
               </h2>
               <p className="text-lg text-foreground/60 mb-10 leading-relaxed">
-                Workers text a job code to your dedicated number and complete the entire application through an AI-powered text chat — in English, Spanish, or other languages. No app to download.
+                Workers text a job code to your number and complete the entire application through an AI-powered text chat — in English, Spanish, or other languages. No app to download.
               </p>
               <div className="space-y-8">
                 {[
-                  { step: "1", title: "Your Number & Keyword Are Auto-Provisioned", desc: "When you create a flow, TextMyApp instantly assigns you a dedicated phone number (e.g., (888) 808-3231) and a unique keyword (e.g., LABOR123). Put them on job sites, flyers, trucks — workers text in from wherever they are." },
+                  { step: "1", title: "Your Number & Keyword Are Auto-Provisioned", desc: "TextMyApp instantly assigns you a phone number and a unique keyword for each application. Put them on job sites, flyers, trucks — workers text in from wherever they are." },
                   { step: "2", title: "Workers Text to Apply", desc: "They text your keyword and immediately start a guided application via SMS in their preferred language — no app, no link, no form." },
                   { step: "3", title: "Applications Land Where You Need Them", desc: "Export to Microsoft Excel, Google Sheets, your ATS, or another internal workflow. No manual data entry." }
                 ].map((item, i) => (
