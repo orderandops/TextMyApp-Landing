@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
 import {
-  MessageSquare,
   Smartphone,
   Clock,
   Database,
@@ -13,15 +12,18 @@ import {
   CheckCircle2,
   Menu,
   X,
-  Calendar,
   ArrowRight,
   Shield,
-  BadgeCheck
+  BadgeCheck,
+  CreditCard,
+  LogIn,
+  Rocket
 } from "lucide-react";
 import heroWorkerImage from "@/assets/images/hero-worker.png";
 import logoImage from "@/assets/images/textmyapp-logo.png";
 
-const CALENDLY_URL = "https://calendly.com/darcie-orderandoperations/textmyapp-product-demo";
+const SIGNUP_URL = "https://app.textmyapp.com/signup";
+const LOGIN_URL = "https://app.textmyapp.com/login";
 
 function Logo() {
   return (
@@ -30,14 +32,7 @@ function Logo() {
 }
 
 export default function Home() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -48,19 +43,23 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col font-sans bg-white">
 
-      {/* ── Sticky Header ── */}
+      {/* ── Header ── */}
       <header className="fixed top-0 w-full z-50 bg-white shadow-sm border-b border-slate-100">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          <Logo dark />
+          <Logo />
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6">
             <button onClick={() => scrollToSection("how-it-works")} className="text-sm font-medium text-foreground/70 hover:text-accent transition-colors">How It Works</button>
             <button onClick={() => scrollToSection("benefits")} className="text-sm font-medium text-foreground/70 hover:text-accent transition-colors">Benefits</button>
             <button onClick={() => scrollToSection("pricing")} className="text-sm font-medium text-foreground/70 hover:text-accent transition-colors">Pricing</button>
-            <Button className="bg-accent hover:bg-accent/90 text-white font-semibold px-6 shadow" asChild data-testid="button-nav-cta">
-              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-                <Calendar className="w-4 h-4 mr-2" />
-                Schedule Live Demo
+            <a href={LOGIN_URL} className="text-sm font-medium text-foreground/70 hover:text-accent transition-colors flex items-center gap-1.5" data-testid="link-login">
+              <LogIn className="w-4 h-4" />
+              Login
+            </a>
+            <Button className="bg-accent hover:bg-accent/90 text-white font-semibold px-5 shadow" asChild data-testid="button-nav-cta">
+              <a href={SIGNUP_URL} target="_blank" rel="noopener noreferrer">
+                <Rocket className="w-4 h-4 mr-2" />
+                Start Free Trial
               </a>
             </Button>
           </nav>
@@ -75,10 +74,13 @@ export default function Home() {
             <button onClick={() => scrollToSection("how-it-works")} className="text-left text-foreground/80 font-medium py-2 border-b border-slate-100">How It Works</button>
             <button onClick={() => scrollToSection("benefits")} className="text-left text-foreground/80 font-medium py-2 border-b border-slate-100">Benefits</button>
             <button onClick={() => scrollToSection("pricing")} className="text-left text-foreground/80 font-medium py-2 border-b border-slate-100">Pricing</button>
+            <a href={LOGIN_URL} className="text-foreground/80 font-medium py-2 border-b border-slate-100 flex items-center gap-2">
+              <LogIn className="w-4 h-4" /> Login
+            </a>
             <Button className="bg-accent hover:bg-accent/90 text-white w-full font-semibold mt-2" asChild>
-              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-                <Calendar className="w-4 h-4 mr-2" />
-                Schedule Live Demo
+              <a href={SIGNUP_URL} target="_blank" rel="noopener noreferrer">
+                <Rocket className="w-4 h-4 mr-2" />
+                Start Free Trial
               </a>
             </Button>
           </div>
@@ -97,7 +99,7 @@ export default function Home() {
             <div className="max-w-xl animate-in fade-in slide-in-from-bottom-6 duration-700">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-semibold mb-6">
                 <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse" />
-                Built for Construction, Trades & Manufacturing
+                Built for Construction, Landscaping, Trades & Manufacturing
               </div>
 
               <h1 className="text-5xl md:text-6xl font-bold font-heading text-primary leading-[1.1] mb-6 tracking-tight">
@@ -111,9 +113,9 @@ export default function Home() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-accent hover:bg-accent/90 text-white text-base h-13 px-8 font-bold shadow-lg shadow-accent/20" asChild data-testid="button-hero-primary">
-                  <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-                    <Calendar className="w-5 h-5 mr-2" />
-                    Schedule Live Demo
+                  <a href={SIGNUP_URL} target="_blank" rel="noopener noreferrer">
+                    <Rocket className="w-5 h-5 mr-2" />
+                    Start Free 14-Day Trial
                   </a>
                 </Button>
                 <Button size="lg" variant="outline" className="border-primary/30 text-primary hover:bg-primary/5 text-base h-13 px-8 font-medium" onClick={() => scrollToSection("how-it-works")} data-testid="button-hero-secondary">
@@ -122,23 +124,23 @@ export default function Home() {
                 </Button>
               </div>
 
-              <div className="flex items-center gap-6 mt-10 pt-8 border-t border-slate-100">
+              <div className="flex flex-wrap items-center gap-5 mt-10 pt-8 border-t border-slate-100">
                 <div className="flex items-center gap-2 text-sm text-foreground/60">
                   <BadgeCheck className="w-4 h-4 text-accent" />
                   TCPA-Compliant
                 </div>
                 <div className="flex items-center gap-2 text-sm text-foreground/60">
-                  <Shield className="w-4 h-4 text-accent" />
-                  30-Day Guarantee
+                  <CreditCard className="w-4 h-4 text-accent" />
+                  No credit card needed
                 </div>
                 <div className="flex items-center gap-2 text-sm text-foreground/60">
                   <Zap className="w-4 h-4 text-accent" />
-                  No App Needed
+                  No app required
                 </div>
               </div>
             </div>
 
-            {/* Right: hero image + floating badge */}
+            {/* Right: hero image */}
             <div className="relative animate-in fade-in slide-in-from-right-6 duration-700 delay-200">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 max-w-lg mx-auto">
                 <img
@@ -147,17 +149,6 @@ export default function Home() {
                   className="w-full h-auto object-cover aspect-[4/3]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
-              </div>
-              <div className="absolute -bottom-5 -left-4 bg-white rounded-xl shadow-xl p-4 border border-slate-100 max-w-xs z-20 animate-in slide-in-from-bottom-8 fade-in duration-700 delay-500">
-                <div className="flex items-start gap-3">
-                  <div className="bg-accent/10 p-2 rounded-full mt-0.5 flex-shrink-0">
-                    <MessageSquare className="w-5 h-5 text-accent" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-medium text-foreground/50 mb-1">New Application</p>
-                    <p className="text-sm font-semibold text-foreground">Juan completed the WELDER123 application via text.</p>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -198,7 +189,6 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-            {/* Steps */}
             <div>
               <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-semibold text-sm mb-6 uppercase tracking-wider">
                 How It Works
@@ -233,7 +223,6 @@ export default function Home() {
               <div className="relative z-10 bg-slate-900 rounded-[3rem] p-3.5 shadow-2xl border-4 border-slate-800 h-[580px] flex flex-col">
                 <div className="absolute top-0 inset-x-0 h-6 bg-slate-900 rounded-b-3xl w-36 mx-auto z-20" />
                 <div className="bg-white flex-1 rounded-[2.3rem] overflow-hidden flex flex-col">
-                  {/* SMS header */}
                   <div className="bg-slate-100 px-4 pt-8 pb-3 border-b flex items-center gap-2">
                     <div className="w-8 h-8 rounded-full bg-accent/20 text-accent flex items-center justify-center flex-shrink-0">
                       <span className="font-bold text-xs">AC</span>
@@ -243,7 +232,6 @@ export default function Home() {
                       <p className="text-xs text-foreground/40">(704) 235-1350</p>
                     </div>
                   </div>
-                  {/* Chat */}
                   <div className="flex-1 p-3 bg-slate-50 space-y-3 flex flex-col overflow-hidden">
                     <div className="self-end bg-[#3B7DE9] text-white rounded-2xl rounded-tr-sm px-3.5 py-2 text-sm shadow-sm max-w-[78%]">
                       WELDER123
@@ -271,7 +259,6 @@ export default function Home() {
                       ¡Excelente! ✅ Su solicitud ha sido enviada a Apex Construction.
                     </div>
                   </div>
-                  {/* Input bar */}
                   <div className="p-3 bg-slate-100 border-t flex items-center gap-2">
                     <div className="flex-1 bg-white border border-slate-200 rounded-full h-8 px-3 text-xs flex items-center text-slate-400">
                       Text Message
@@ -317,14 +304,72 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Integrations ── */}
+      <section className="py-16 bg-white border-y border-slate-100">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold font-heading text-primary mb-3">Native Integrations</h2>
+            <p className="text-foreground/60">Connect TextMyApp directly to the tools your team already uses.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {[
+              {
+                name: "Google Drive",
+                desc: "Send completed applications directly to Google Sheets or Google Drive folders. Share with your team instantly.",
+                logo: (
+                  <svg className="w-10 h-10" viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z" fill="#0066da"/>
+                    <path d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0 -1.2 4.5h27.5z" fill="#00ac47"/>
+                    <path d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.502l5.852 11.5z" fill="#ea4335"/>
+                    <path d="m43.65 25 13.75-23.8c-1.35-.8-2.9-1.2-4.5-1.2h-18.5c-1.6 0-3.15.45-4.5 1.2z" fill="#00832d"/>
+                    <path d="m59.8 53h-32.3l-13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z" fill="#2684fc"/>
+                    <path d="m73.4 26.5-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3l-13.75 23.8 16.15 27h27.45c0-1.55-.4-3.1-1.2-4.5z" fill="#ffba00"/>
+                  </svg>
+                )
+              },
+              {
+                name: "Microsoft 365",
+                desc: "Sync applications to SharePoint lists, Excel files, or Teams channels. Works natively with your existing Microsoft environment.",
+                logo: (
+                  <svg className="w-10 h-10" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#f3f3f3" d="M0 0h23v23H0z"/>
+                    <path fill="#f35325" d="M1 1h10v10H1z"/>
+                    <path fill="#81bc06" d="M12 1h10v10H12z"/>
+                    <path fill="#05a6f0" d="M1 12h10v10H1z"/>
+                    <path fill="#ffba08" d="M12 12h10v10H12z"/>
+                  </svg>
+                )
+              },
+              {
+                name: "BambooHR",
+                desc: "Push applicant data directly into BambooHR so your HR team can manage candidates without any extra steps.",
+                logo: (
+                  <div className="w-10 h-10 rounded-lg bg-[#73c41d] flex items-center justify-center">
+                    <span className="text-white font-black text-sm font-heading">B</span>
+                  </div>
+                )
+              }
+            ].map((integration, i) => (
+              <div key={i} className="flex flex-col gap-4 bg-slate-50 p-6 rounded-2xl border border-slate-200 hover:border-accent/30 hover:shadow-md transition-all">
+                <div className="flex items-center gap-4">
+                  {integration.logo}
+                  <h3 className="text-lg font-bold font-heading text-primary">{integration.name}</h3>
+                </div>
+                <p className="text-foreground/60 text-sm leading-relaxed">{integration.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Trust Bar ── */}
       <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/20">
             {[
-              { icon: <CheckCircle2 className="w-9 h-9 text-accent" />, title: "Built for the Trades", desc: "Specifically designed for construction, manufacturing, HVAC, plumbing, and electrical hiring." },
+              { icon: <CheckCircle2 className="w-9 h-9 text-accent" />, title: "Built for the Trades", desc: "Specifically designed for construction, landscaping, manufacturing, HVAC, plumbing, and electrical hiring." },
               { icon: <Shield className="w-9 h-9 text-accent" />, title: "TCPA-Compliant", desc: "Carrier-registered messaging ensures your messages get delivered securely and legally." },
-              { icon: <BadgeCheck className="w-9 h-9 text-accent" />, title: "30-Day Guarantee", desc: "Try risk-free. If you don't hire faster, get your money back." }
+              { icon: <CreditCard className="w-9 h-9 text-accent" />, title: "No Credit Card Needed", desc: "Start your free 14-day trial instantly — no credit card required, cancel anytime." }
             ].map((item, i) => (
               <div key={i} className="p-6 flex flex-col items-center gap-3">
                 {item.icon}
@@ -344,7 +389,7 @@ export default function Home() {
               Pricing
             </div>
             <h2 className="text-3xl md:text-5xl font-bold font-heading text-primary mb-2">Simple, Transparent Pricing</h2>
-            <p className="text-lg text-foreground/60 mt-2">Save 20% with annual billing.</p>
+            <p className="text-lg text-foreground/60 mt-2">Save 20% with annual billing. Start free — no credit card needed.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto items-start">
@@ -367,8 +412,9 @@ export default function Home() {
                   ))}
                 </ul>
                 <Button variant="outline" className="w-full border-primary/30 text-primary hover:bg-primary/5 font-semibold" data-testid="button-pricing-starter" asChild>
-                  <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">Schedule Live Demo</a>
+                  <a href={SIGNUP_URL} target="_blank" rel="noopener noreferrer">Start Free 14-Day Trial</a>
                 </Button>
+                <p className="text-center text-xs text-foreground/40 mt-3">No credit card needed</p>
               </CardContent>
             </Card>
 
@@ -393,8 +439,9 @@ export default function Home() {
                   ))}
                 </ul>
                 <Button className="w-full bg-accent hover:bg-accent/90 text-white font-bold shadow" data-testid="button-pricing-growth" asChild>
-                  <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">Schedule Live Demo</a>
+                  <a href={SIGNUP_URL} target="_blank" rel="noopener noreferrer">Start Free 14-Day Trial</a>
                 </Button>
+                <p className="text-center text-xs text-foreground/40 mt-3">No credit card needed</p>
               </CardContent>
             </Card>
 
@@ -408,7 +455,7 @@ export default function Home() {
                 </div>
                 <p className="text-sm text-accent font-semibold mb-7">or $239/mo billed annually</p>
                 <ul className="space-y-3 mb-8">
-                  {["500 applications/month", "5 flows", "5 team seats", "Priority support"].map((f) => (
+                  {["500 applications/month", "5 flows", "5 team seats"].map((f) => (
                     <li key={f} className="flex items-center gap-3 text-foreground/80">
                       <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
                       <span>{f}</span>
@@ -416,13 +463,19 @@ export default function Home() {
                   ))}
                 </ul>
                 <Button variant="outline" className="w-full border-primary/30 text-primary hover:bg-primary/5 font-semibold" data-testid="button-pricing-pro" asChild>
-                  <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">Schedule Live Demo</a>
+                  <a href={SIGNUP_URL} target="_blank" rel="noopener noreferrer">Start Free 14-Day Trial</a>
                 </Button>
+                <p className="text-center text-xs text-foreground/40 mt-3">No credit card needed</p>
               </CardContent>
             </Card>
 
           </div>
-          <p className="text-center text-sm text-foreground/50 mt-8">Add-ons: Extra flow or extra seat — $19/mo each</p>
+
+          <div className="max-w-5xl mx-auto mt-6 px-2">
+            <p className="text-sm text-foreground/50">
+              <strong className="text-foreground/70">Add-ons:</strong> Extra flow or extra seat — $19/mo each &nbsp;·&nbsp; 50 extra applications/month — $49/mo
+            </p>
+          </div>
         </div>
       </section>
 
@@ -430,54 +483,51 @@ export default function Home() {
       <section id="signup-section" className="py-24 bg-primary scroll-mt-20">
         <div className="container mx-auto px-4 relative z-10 flex flex-col items-center text-center">
           <h2 className="text-4xl md:text-5xl font-bold font-heading text-white mb-5">Stop losing candidates to clunky forms.</h2>
-          <p className="text-xl text-white/70 max-w-2xl mx-auto mb-10">
-            See TextMyApp in action. Schedule a personalized demo and start filling your open roles faster.
+          <p className="text-xl text-white/70 max-w-2xl mx-auto mb-4">
+            Start your free 14-day trial today and fill your open roles faster.
           </p>
+          <p className="text-white/50 text-sm mb-10">No credit card needed. Cancel anytime.</p>
           <Button size="lg" className="bg-accent hover:bg-accent/90 text-white text-lg h-14 px-10 font-bold shadow-xl" asChild data-testid="button-bottom-cta">
-            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-              <Calendar className="w-5 h-5 mr-2" />
-              Schedule Live Demo
+            <a href={SIGNUP_URL} target="_blank" rel="noopener noreferrer">
+              <Rocket className="w-5 h-5 mr-2" />
+              Start Free 14-Day Trial
             </a>
           </Button>
         </div>
       </section>
 
       {/* ── Footer ── */}
-      <footer className="bg-slate-950 text-slate-400 py-12 border-t border-white/10">
+      <footer className="bg-white text-foreground/60 py-8 border-t border-slate-200">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-            <div className="col-span-1 md:col-span-2">
-              <div className="mb-4">
-                <img src={logoImage} alt="TextMyApp" className="h-9 w-auto brightness-0 invert" />
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+
+            <div>
+              <img src={logoImage} alt="TextMyApp" className="h-10 w-auto mb-3" />
+              <p className="text-xs text-foreground/40">A product by Order and Operations Consulting</p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-8 text-sm">
+              <div>
+                <p className="font-semibold text-foreground/70 mb-1">Contact</p>
+                <a href="mailto:support@textmyapp.com" className="hover:text-accent transition-colors">support@textmyapp.com</a>
               </div>
-              <p className="text-sm max-w-xs mb-4 leading-relaxed">
-                The only text-to-apply that actually completes the application — no links, no forms, no drop-off.
-              </p>
-              <p className="text-sm">A product by <strong className="text-slate-300">Order and Operations Consulting</strong></p>
+              <div>
+                <p className="font-semibold text-foreground/70 mb-1">Legal</p>
+                <div className="flex flex-col gap-1">
+                  <Link href="/apply" className="hover:text-accent transition-colors">How to Apply</Link>
+                  <Link href="/privacy-policy" className="hover:text-accent transition-colors">Privacy Policy</Link>
+                  <Link href="/terms-conditions" className="hover:text-accent transition-colors">Terms & Conditions</Link>
+                </div>
+              </div>
             </div>
 
-            <div>
-              <h4 className="text-white font-semibold mb-4">Contact</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="mailto:hello@orderandoperations.com" className="hover:text-white transition-colors">hello@orderandoperations.com</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-white font-semibold mb-4">Legal</h4>
-              <ul className="space-y-2 text-sm">
-                <li><Link href="/apply" className="hover:text-white transition-colors">How to Apply</Link></li>
-                <li><Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
-                <li><Link href="/terms-conditions" className="hover:text-white transition-colors">Terms & Conditions</Link></li>
-              </ul>
-            </div>
           </div>
-
-          <div className="pt-8 border-t border-white/10 text-sm">
-            <p>&copy; 2026 Order and Operations Consulting. All rights reserved.</p>
+          <div className="mt-6 pt-5 border-t border-slate-100 text-xs text-foreground/40">
+            &copy; 2026 Order and Operations Consulting. All rights reserved.
           </div>
         </div>
       </footer>
+
     </div>
   );
 }
