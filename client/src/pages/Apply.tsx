@@ -30,7 +30,7 @@ export default function Apply() {
         <div className="space-y-6 mb-12">
           {[
             { step: "1", title: "Get your application code from an employer", desc: "You'll find it on job postings, flyers, or the employer's website." },
-            { step: "2", title: "Text your code to (704) 235-1350", desc: "Send your application code as a text message to our number." },
+            { step: "2", title: "Text your code to (888) 808-3231", desc: "Send your application code as a text message to our number." },
             { step: "3", title: "Answer a few simple questions via text", desc: "Our AI will guide you through the application in your preferred language — no app download required." },
             { step: "4", title: "Your application is sent directly to the employer", desc: "That's it! The employer receives your completed application automatically." }
           ].map((item) => (
@@ -53,7 +53,7 @@ export default function Apply() {
             <h2 className="text-lg font-bold font-heading text-primary">Example</h2>
           </div>
           <p className="text-foreground/70 text-sm leading-relaxed">
-            If your code is <strong className="text-primary">APP001</strong>, text <strong className="text-accent">"APP001"</strong> to <strong className="text-primary">(704) 235-1350</strong>
+            If your code is <strong className="text-primary">APP001</strong>, text <strong className="text-accent">"APP001"</strong> to <strong className="text-primary">(888) 808-3231</strong>
           </p>
         </div>
 

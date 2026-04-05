@@ -201,9 +201,9 @@ export default function Home() {
               </p>
               <div className="space-y-8">
                 {[
-                  { step: "1", title: "Create a Job Code", desc: "Set up a unique keyword for each role (e.g., LABOR123). Put it on signs, trucks, and flyers." },
-                  { step: "2", title: "Workers Text to Apply", desc: "They text your code and immediately start a guided application via SMS in their preferred language." },
-                  { step: "3", title: "Applications Land Where You Need Them", desc: "Export to a SharePoint list, Google Sheet, your ATS, or another internal workflow. No manual data entry." }
+                  { step: "1", title: "Your Number & Keyword Are Auto-Provisioned", desc: "When you create a flow, TextMyApp instantly assigns you a dedicated phone number (e.g., (888) 808-3231) and a unique keyword (e.g., LABOR123). Put them on job sites, flyers, trucks — workers text in from wherever they are." },
+                  { step: "2", title: "Workers Text to Apply", desc: "They text your keyword and immediately start a guided application via SMS in their preferred language — no app, no link, no form." },
+                  { step: "3", title: "Applications Land Where You Need Them", desc: "Export to Microsoft Excel, Google Sheets, your ATS, or another internal workflow. No manual data entry." }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-5">
                     <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent text-white flex items-center justify-center font-bold text-xl font-heading shadow-md shadow-accent/20">
@@ -229,7 +229,7 @@ export default function Home() {
                     </div>
                     <div>
                       <p className="text-xs font-semibold text-primary">Apex Construction</p>
-                      <p className="text-xs text-foreground/40">(704) 235-1350</p>
+                      <p className="text-xs text-foreground/40">(888) 808-3231</p>
                     </div>
                   </div>
                   <div className="flex-1 p-3 bg-slate-50 space-y-3 flex flex-col overflow-hidden">
@@ -288,7 +288,7 @@ export default function Home() {
               { icon: <Users className="w-6 h-6" />, title: "Capture More Candidates", desc: "Reach the 80% of workers who abandon traditional online forms before finishing." },
               { icon: <Globe2 className="w-6 h-6" />, title: "Remove Language Barriers", desc: "Our AI handles English and Spanish (with more languages coming soon!), opening up a massive untapped talent pool." },
               { icon: <Clock className="w-6 h-6" />, title: "Fill Roles Faster", desc: "Candidates complete applications in minutes from their job site, not days later from a computer." },
-              { icon: <Database className="w-6 h-6" />, title: "Flexible Export & Integration", desc: "ATS integration capable — plus export to a SharePoint list, Google Sheet, or your own internal workflow. No new software to learn." }
+              { icon: <Database className="w-6 h-6" />, title: "Flexible Export & Integration", desc: "ATS integration capable — plus export to Microsoft Excel, Google Sheets, or your own internal workflow. No new software to learn." }
             ].map((benefit, i) => (
               <div key={i} className="flex gap-5 bg-white p-7 rounded-2xl border border-slate-200 hover:border-accent/40 hover:shadow-md transition-all">
                 <div className="flex-shrink-0 w-12 h-12 bg-accent/10 text-accent rounded-xl flex items-center justify-center">
@@ -329,7 +329,7 @@ export default function Home() {
               },
               {
                 name: "Microsoft 365",
-                desc: "Sync applications to SharePoint lists, Excel files, or Teams channels. Works natively with your existing Microsoft environment.",
+                desc: "Sync applications to Microsoft Excel or Teams channels. Works natively with your existing Microsoft environment.",
                 logo: (
                   <svg className="w-10 h-10" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
                     <path fill="#f3f3f3" d="M0 0h23v23H0z"/>
@@ -343,6 +343,7 @@ export default function Home() {
               {
                 name: "BambooHR",
                 desc: "Push applicant data directly into BambooHR so your HR team can manage candidates without any extra steps.",
+                comingSoon: true,
                 logo: (
                   <div className="w-10 h-10 rounded-lg bg-[#73c41d] flex items-center justify-center">
                     <span className="text-white font-black text-sm font-heading">B</span>
@@ -350,7 +351,12 @@ export default function Home() {
                 )
               }
             ].map((integration, i) => (
-              <div key={i} className="flex flex-col gap-4 bg-slate-50 p-6 rounded-2xl border border-slate-200 hover:border-accent/30 hover:shadow-md transition-all">
+              <div key={i} className="relative flex flex-col gap-4 bg-slate-50 p-6 rounded-2xl border border-slate-200 hover:border-accent/30 hover:shadow-md transition-all">
+                {integration.comingSoon && (
+                  <div className="absolute top-3 right-3 bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wide">
+                    Coming Soon
+                  </div>
+                )}
                 <div className="flex items-center gap-4">
                   {integration.logo}
                   <h3 className="text-lg font-bold font-heading text-primary">{integration.name}</h3>
@@ -497,33 +503,16 @@ export default function Home() {
       </section>
 
       {/* ── Footer ── */}
-      <footer className="bg-white text-foreground/60 py-8 border-t border-slate-200">
+      <footer className="bg-white border-t border-slate-200 py-5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-
-            <div>
-              <img src={logoImage} alt="TextMyApp" className="h-10 w-auto mb-3" />
-              <p className="text-xs text-foreground/40">A product by Order and Operations Consulting</p>
+          <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 text-xs text-foreground/50">
+            <span>&copy; 2026 Order and Operations Consulting. All rights reserved.</span>
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
+              <a href="mailto:support@textmyapp.com" className="hover:text-accent transition-colors">support@textmyapp.com</a>
+              <Link href="/apply" className="hover:text-accent transition-colors">How to Apply</Link>
+              <Link href="/privacy-policy" className="hover:text-accent transition-colors">Privacy Policy</Link>
+              <Link href="/terms-conditions" className="hover:text-accent transition-colors">Terms & Conditions</Link>
             </div>
-
-            <div className="flex flex-col sm:flex-row gap-8 text-sm">
-              <div>
-                <p className="font-semibold text-foreground/70 mb-1">Contact</p>
-                <a href="mailto:support@textmyapp.com" className="hover:text-accent transition-colors">support@textmyapp.com</a>
-              </div>
-              <div>
-                <p className="font-semibold text-foreground/70 mb-1">Legal</p>
-                <div className="flex flex-col gap-1">
-                  <Link href="/apply" className="hover:text-accent transition-colors">How to Apply</Link>
-                  <Link href="/privacy-policy" className="hover:text-accent transition-colors">Privacy Policy</Link>
-                  <Link href="/terms-conditions" className="hover:text-accent transition-colors">Terms & Conditions</Link>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div className="mt-6 pt-5 border-t border-slate-100 text-xs text-foreground/40">
-            &copy; 2026 Order and Operations Consulting. All rights reserved.
           </div>
         </div>
       </footer>
