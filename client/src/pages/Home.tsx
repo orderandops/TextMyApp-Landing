@@ -343,7 +343,7 @@ export default function Home() {
               {
                 name: "BambooHR",
                 desc: "Push applicant data directly into BambooHR so your HR team can manage candidates without any extra steps.",
-                comingSoon: true,
+
                 logo: (
                   <div className="w-10 h-10 rounded-lg bg-[#73c41d] flex items-center justify-center">
                     <span className="text-white font-black text-sm font-heading">B</span>
@@ -352,11 +352,7 @@ export default function Home() {
               }
             ].map((integration, i) => (
               <div key={i} className="relative flex flex-col gap-4 bg-slate-50 p-6 rounded-2xl border border-slate-200 hover:border-accent/30 hover:shadow-md transition-all">
-                {integration.comingSoon && (
-                  <div className="absolute top-3 right-3 bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wide">
-                    Coming Soon
-                  </div>
-                )}
+
                 <div className="flex items-center gap-4">
                   {integration.logo}
                   <h3 className="text-lg font-bold font-heading text-primary">{integration.name}</h3>
