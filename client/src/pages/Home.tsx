@@ -406,7 +406,7 @@ export default function Home() {
                 </div>
                 <p className="text-sm text-accent font-semibold mb-7">or $63/mo billed annually</p>
                 <ul className="space-y-3 mb-8">
-                  {["50 applications/month", "1 flow", "1 team seat"].map((f) => (
+                  {["50 applications/month", "1 job", "1 team seat"].map((f) => (
                     <li key={f} className="flex items-center gap-3 text-foreground/80">
                       <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
                       <span>{f}</span>
@@ -433,7 +433,7 @@ export default function Home() {
                 </div>
                 <p className="text-sm text-accent font-semibold mb-7">or $119/mo billed annually</p>
                 <ul className="space-y-3 mb-8">
-                  {["150 applications/month", "3 flows", "2 team seats"].map((f) => (
+                  {["150 applications/month", "3 jobs", "2 team seats"].map((f) => (
                     <li key={f} className="flex items-center gap-3 text-foreground/80">
                       <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
                       <span>{f}</span>
@@ -457,7 +457,7 @@ export default function Home() {
                 </div>
                 <p className="text-sm text-accent font-semibold mb-7">or $239/mo billed annually</p>
                 <ul className="space-y-3 mb-8">
-                  {["500 applications/month", "5 flows", "5 team seats"].map((f) => (
+                  {["500 applications/month", "5 jobs", "5 team seats"].map((f) => (
                     <li key={f} className="flex items-center gap-3 text-foreground/80">
                       <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
                       <span>{f}</span>
@@ -475,7 +475,7 @@ export default function Home() {
 
           <div className="max-w-5xl mx-auto mt-6 px-2">
             <p className="text-sm text-foreground/50">
-              <strong className="text-foreground/70">Add-ons:</strong> Extra flow or extra seat — $19/mo each &nbsp;·&nbsp; 50 extra applications/month — $49/mo
+              <strong className="text-foreground/70">Add-ons:</strong> Extra job or extra seat — $19/mo each &nbsp;·&nbsp; 50 extra applications/month — $49/mo
             </p>
           </div>
         </div>
