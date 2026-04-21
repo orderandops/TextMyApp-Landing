@@ -22,7 +22,7 @@ import {
 import heroWorkerImage from "@/assets/images/hero-worker.png";
 import logoImage from "@/assets/images/textmyapp-logo.png";
 
-const SIGNUP_URL = "https://app.textmyapp.com/signup";
+const SIGNUP_URL = "https://app.textmyapp.com/trial";
 const LOGIN_URL = "https://app.textmyapp.com/login";
 
 function Logo() {
