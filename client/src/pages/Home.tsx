@@ -54,6 +54,7 @@ export default function Home() {
           <nav className="hidden md:flex items-center gap-6">
             <button onClick={() => scrollToSection("how-it-works")} className="text-sm font-medium text-foreground/70 hover:text-accent transition-colors">How It Works</button>
             <button onClick={() => scrollToSection("benefits")} className="text-sm font-medium text-foreground/70 hover:text-accent transition-colors">Benefits</button>
+            <Link href="/story" className="text-sm font-medium text-foreground/70 hover:text-accent transition-colors">Story</Link>
             <button onClick={() => scrollToSection("pricing")} className="text-sm font-medium text-foreground/70 hover:text-accent transition-colors">Pricing</button>
             <a href={LOGIN_URL} className="text-sm font-medium text-foreground/70 hover:text-accent transition-colors flex items-center gap-1.5" data-testid="link-login">
               <LogIn className="w-4 h-4" />
@@ -76,6 +77,7 @@ export default function Home() {
           <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t py-4 px-4 flex flex-col gap-3">
             <button onClick={() => scrollToSection("how-it-works")} className="text-left text-foreground/80 font-medium py-2 border-b border-slate-100">How It Works</button>
             <button onClick={() => scrollToSection("benefits")} className="text-left text-foreground/80 font-medium py-2 border-b border-slate-100">Benefits</button>
+            <Link href="/story" className="text-left text-foreground/80 font-medium py-2 border-b border-slate-100">Story</Link>
             <button onClick={() => scrollToSection("pricing")} className="text-left text-foreground/80 font-medium py-2 border-b border-slate-100">Pricing</button>
             <a href={LOGIN_URL} className="text-foreground/80 font-medium py-2 border-b border-slate-100 flex items-center gap-2">
               <LogIn className="w-4 h-4" /> Login

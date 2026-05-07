@@ -28,6 +28,7 @@ export default function Story() {
           <nav className="hidden md:flex items-center gap-6">
             <Link href="/#how-it-works" className="text-sm font-medium text-foreground/70 hover:text-accent transition-colors">How It Works</Link>
             <Link href="/#benefits" className="text-sm font-medium text-foreground/70 hover:text-accent transition-colors">Benefits</Link>
+            <Link href="/story" className="text-sm font-medium text-foreground/70 hover:text-accent transition-colors">Story</Link>
             <Link href="/#pricing" className="text-sm font-medium text-foreground/70 hover:text-accent transition-colors">Pricing</Link>
             <a href={LOGIN_URL} className="text-sm font-medium text-foreground/70 hover:text-accent transition-colors flex items-center gap-1.5">
               <LogIn className="w-4 h-4" />
@@ -50,6 +51,7 @@ export default function Story() {
           <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t py-4 px-4 flex flex-col gap-3">
             <Link href="/#how-it-works" className="text-left text-foreground/80 font-medium py-2 border-b border-slate-100">How It Works</Link>
             <Link href="/#benefits" className="text-left text-foreground/80 font-medium py-2 border-b border-slate-100">Benefits</Link>
+            <Link href="/story" className="text-left text-foreground/80 font-medium py-2 border-b border-slate-100">Story</Link>
             <Link href="/#pricing" className="text-left text-foreground/80 font-medium py-2 border-b border-slate-100">Pricing</Link>
             <a href={LOGIN_URL} className="text-foreground/80 font-medium py-2 border-b border-slate-100 flex items-center gap-2">
               <LogIn className="w-4 h-4" /> Login
