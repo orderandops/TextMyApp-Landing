@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Rocket, LogIn, Menu, X } from "lucide-react";
@@ -10,6 +10,10 @@ const FOUNDER_PHOTO = "https://blueclaw.tech/assets/DG_Headshot_2026_17781521853
 
 export default function Story() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col font-sans bg-white">
