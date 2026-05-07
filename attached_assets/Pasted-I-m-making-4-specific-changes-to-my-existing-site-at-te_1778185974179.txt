@@ -1,0 +1,73 @@
+I'm making 4 specific changes to my existing site at textmyapp.com. Do not redesign, restyle, or modify anything else. Match the existing design language (color palette: primary navy #385775, accent orange #ED7D31, soft blue-gray #EDF2F6 for alternating section backgrounds, white for primary sections; existing typography and spacing).
+
+═══════════════════════════════════════════
+CHANGE 1: Add a compressed Founder section to the homepage
+═══════════════════════════════════════════
+
+PLACEMENT: Insert a new section AFTER the "Built for the Trades / TCPA-Compliant / No Credit Card Needed" three-column section and BEFORE the "Simple, Transparent Pricing" section. Do not move or modify anything else.
+
+LAYOUT: Two-column on desktop (image left, text right), single-column on mobile (image on top). Section background: #EDF2F6. Generous vertical padding (py-20 md:py-24). Max width container 1100px, centered. Image is ~200px wide on desktop, displayed in a rounded square frame with a 4px left border in #ED7D31 (orange accent) to match the BlueClaw design language.
+
+IMAGE: Use this URL for the founder photo:
+https://blueclaw.tech/assets/DG_Headshot_2026_1778152185382-DkEKXtOq.png
+(Optional: download it and re-host on the existing Supabase bucket at xojrnisszsebnpawoarq.supabase.co for long-term reliability.)
+
+EXACT COPY (use verbatim):
+
+Eyebrow (small uppercase label, orange #ED7D31): "FROM THE FOUNDER"
+
+Headline (large, navy #385775, font-weight 700): 
+"Built by an HR leader who lived this problem."
+
+Name + credentials (medium, navy, semibold):
+"Darcie Gregoire, SPHR, SHRM-SCP"
+
+Title (small, orange uppercase tracking-wide):
+"Founder, TextMyApp"
+
+Body paragraph (regular weight, dark gray #4A6274, ~16-18px, generous line-height):
+"Former DOL Wage & Hour investigator and HR leader for a multi-state construction company. I built TextMyApp because I watched too many great candidates disappear into broken application forms — workers who'd be perfect for the job but wouldn't fight through a 12-field web form on a phone in a parking lot."
+
+Link (orange #ED7D31, semibold, with arrow icon):
+"Read the full story →"
+This link routes to /story
+
+═══════════════════════════════════════════
+CHANGE 2: Create a new /story page
+═══════════════════════════════════════════
+
+ROUTE: Create a new page at /story. Add it to the router. Use the same site header (logo, nav, Login, Start Free Trial buttons) and same site footer as the homepage — just a different body.
+
+PAGE STRUCTURE: Three stacked sections, generous padding, max-width 800px for body content (centered, easy to read).
+
+SECTION 1 — Hero (white background):
+- Same founder photo as the homepage card, centered, larger (~280px wide), same orange left-border treatment.
+- Headline (large, navy #385775, centered): "Why I built TextMyApp"
+- Subhead (medium, dark gray, centered): "Darcie Gregoire, SPHR, SHRM-SCP · Founder"
+
+SECTION 2 — Full bio (background #EDF2F6):
+Use these four paragraphs verbatim, each in its own <p> tag, regular weight, ~18px, line-height 1.7:
+
+"I spent years as a Department of Labor Wage & Hour investigator reviewing certified payroll for construction projects. Then I ran HR for a construction company — multi-state compliance, hiring pipelines, and the operational chaos of scaling a blue-collar workforce."
+
+"I watched great candidates disappear into broken application funnels. Workers who'd be perfect for the job — but wouldn't fight through a 12-field web form on a phone in a parking lot. Spanish speakers blocked by English-only portals. QR codes that scanned but never converted."
+
+"So I built the tool I wished existed when I was sitting on the other side of the desk. TextMyApp is the application flow I would have killed for."
+
+"If you're hiring in the trades right now, I'd love to hear what's working and what's not — text or email me anytime."
+
+Sign-off (right-aligned, italic, navy):
+"— Darcie"
+
+SECTION 3 — What we're building + contact (white background):
+- Small heading (navy, semibold): "What we're building"
+- Paragraph: "TextMyApp is the first product from BlueClaw, a venture studio building AI-powered tools for blue-collar industries. Our second product, PayrollProof, helps construction companies generate compliant WH-347 certified payroll reports in minutes. The mission is simple: ship real tools for the people who build the real world."
+- Below that, a "Get in touch" subhead with three lines:
+  - Email: darcie@textmyapp.com (mailto link, orange)
+  - LinkedIn: https://www.linkedin.com/in/darciegregoire/ (open in new tab, orange)
+  - Parent company: blueclaw.tech (open in new tab, orange)
+
+Below SECTION 3, add a final centered CTA block (matching the homepage's existing CTA section style — dark navy background, white text, orange button):
+- Headline: "Ready to see it in action?"
+- Subtext: "Start your free 14-day trial — no credit card, cancel anytime."
+- Button (orange): "Start Free 14-Day Trial" — links to the existing signup flow (the same destination as the hero CTA on the homepage).

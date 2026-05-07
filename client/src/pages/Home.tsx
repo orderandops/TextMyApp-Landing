@@ -386,6 +386,42 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Founder ── */}
+      <section className="py-20 md:py-24 bg-[#EDF2F6]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+          <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-center md:items-start">
+
+            {/* Photo */}
+            <div className="flex-shrink-0">
+              <div className="w-48 h-48 md:w-52 md:h-52 rounded-xl overflow-hidden border-l-4 border-accent shadow-md">
+                <img
+                  src="https://blueclaw.tech/assets/DG_Headshot_2026_1778152185382-DkEKXtOq.png"
+                  alt="Darcie Gregoire, Founder of TextMyApp"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Copy */}
+            <div className="max-w-xl">
+              <p className="text-xs font-bold uppercase tracking-widest text-accent mb-3">From the Founder</p>
+              <h2 className="text-3xl md:text-4xl font-bold font-heading text-primary mb-4 leading-tight">
+                Built by an HR leader who lived this problem.
+              </h2>
+              <p className="font-semibold text-primary mb-0.5">Darcie Gregoire, SPHR, SHRM-SCP</p>
+              <p className="text-xs font-bold uppercase tracking-wide text-accent mb-5">Founder, TextMyApp</p>
+              <p className="text-[#4A6274] text-base md:text-lg leading-relaxed mb-6">
+                Former DOL Wage & Hour investigator and HR leader for a multi-state construction company. I built TextMyApp because I watched too many great candidates disappear into broken application forms — workers who'd be perfect for the job but wouldn't fight through a 12-field web form on a phone in a parking lot.
+              </p>
+              <Link href="/story" className="inline-flex items-center gap-1.5 text-accent font-semibold hover:underline">
+                Read the full story <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* ── Pricing ── */}
       <section id="pricing" className="py-24 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

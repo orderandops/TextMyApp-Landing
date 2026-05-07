@@ -8,6 +8,7 @@ import AdminDashboard from "@/pages/AdminDashboard";
 import Apply from "@/pages/Apply";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import TermsConditions from "@/pages/TermsConditions";
+import Story from "@/pages/Story";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -18,6 +19,7 @@ function Router() {
       <Route path="/apply" component={Apply} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/terms-conditions" component={TermsConditions} />
+      <Route path="/story" component={Story} />
       <Route component={NotFound} />
     </Switch>
   );
