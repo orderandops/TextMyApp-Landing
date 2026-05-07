@@ -67,7 +67,7 @@ export default function Story() {
             <img
               src={FOUNDER_PHOTO}
               alt="Darcie Gregoire, Founder of TextMyApp"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top"
             />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold font-heading text-primary mb-4 leading-tight">
