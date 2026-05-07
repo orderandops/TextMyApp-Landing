@@ -397,7 +397,8 @@ export default function Home() {
                 <img
                   src="https://blueclaw.tech/assets/DG_Headshot_2026_1778152185382-DkEKXtOq.png"
                   alt="Darcie Gregoire, Founder of TextMyApp"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: "50% 15%" }}
                 />
               </div>
             </div>
