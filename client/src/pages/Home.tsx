@@ -505,12 +505,12 @@ export default function Home() {
       <footer className="bg-white border-t border-slate-200 py-5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 text-xs text-foreground/50">
-            <span>&copy; 2026 Order and Operations Consulting. All rights reserved.</span>
+            <span>&copy; 2026 BlueClaw LLC. All rights reserved. &nbsp;&middot;&nbsp; TextMyApp is a BlueClaw company.</span>
             <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
               <a href="mailto:support@textmyapp.com" className="hover:text-accent transition-colors">support@textmyapp.com</a>
               <Link href="/apply" className="hover:text-accent transition-colors">How to Apply</Link>
               <Link href="/privacy-policy" className="hover:text-accent transition-colors">Privacy Policy</Link>
-              <Link href="/terms-conditions" className="hover:text-accent transition-colors">Terms & Conditions</Link>
+              <Link href="/terms-conditions" className="hover:text-accent transition-colors">Terms &amp; Conditions</Link>
             </div>
           </div>
         </div>
