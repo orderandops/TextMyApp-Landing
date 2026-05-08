@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import heroWorkerImage from "@/assets/images/hero-worker.png";
 import logoImage from "@/assets/images/textmyapp-logo.png";
+import qrCodeImage from "@/assets/images/qr-code.png";
 
 declare const Supademo: { open: (id: string) => void };
 
@@ -129,7 +130,12 @@ export default function Home() {
                 </Button>
               </div>
 
-              <div className="flex flex-wrap items-center gap-5 mt-10 pt-8 border-t border-slate-100">
+              <div className="flex items-center gap-4 mt-8">
+                <img src={qrCodeImage} alt="QR code to try TextMyApp" className="w-20 h-20 rounded-lg border border-slate-200 shadow-sm" />
+                <p className="text-sm text-foreground/60 leading-snug max-w-[180px]">Try the texting experience for yourself.</p>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-5 mt-6 pt-8 border-t border-slate-100">
                 <div className="flex items-center gap-2 text-sm text-foreground/60">
                   <BadgeCheck className="w-4 h-4 text-accent" />
                   TCPA-Compliant
