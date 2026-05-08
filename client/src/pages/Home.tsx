@@ -132,9 +132,9 @@ export default function Home() {
 
               <div className="flex items-center gap-3 mt-8">
                 <img src={qrCodeImage} alt="QR code to try TextMyApp" className="w-20 h-20 rounded-lg border border-slate-200 shadow-sm flex-shrink-0" />
-                <svg viewBox="0 0 70 52" className="w-16 h-12 flex-shrink-0" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M 66 10 C 54 8, 28 6, 10 28 C 8 31, 7 35, 6 40" stroke="#ED7D31" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M 6 40 L 16 36 M 6 40 L 10 29" stroke="#ED7D31" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+                <svg viewBox="0 0 80 56" className="w-20 h-14 flex-shrink-0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M 74 46 C 58 48, 30 32, 10 10" stroke="#ED7D31" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M 10 10 L 22 16 M 10 10 L 16 24" stroke="#ED7D31" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
                 <p className="text-sm text-foreground/60 leading-snug max-w-[140px] italic">Try the texting experience for yourself.</p>
               </div>
