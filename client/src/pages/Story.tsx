@@ -118,8 +118,8 @@ export default function Story() {
           <h3 className="text-lg font-semibold text-primary mb-4">Get in touch</h3>
           <div className="space-y-2 text-base">
             <div>
-              <a href="mailto:darcie@textmyapp.com" className="text-accent font-semibold hover:underline">
-                darcie@textmyapp.com
+              <a href="mailto:darcie@blueclaw.tech" className="text-accent font-semibold hover:underline">
+                darcie@blueclaw.tech
               </a>
             </div>
             <div>
