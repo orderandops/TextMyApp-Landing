@@ -130,9 +130,13 @@ export default function Home() {
                 </Button>
               </div>
 
-              <div className="flex items-center gap-4 mt-8">
-                <img src={qrCodeImage} alt="QR code to try TextMyApp" className="w-20 h-20 rounded-lg border border-slate-200 shadow-sm" />
-                <p className="text-sm text-foreground/60 leading-snug max-w-[180px]">Try the texting experience for yourself.</p>
+              <div className="flex items-center gap-3 mt-8">
+                <p className="text-sm text-foreground/60 leading-snug max-w-[140px] italic">Try the texting experience for yourself.</p>
+                <svg viewBox="0 0 64 48" className="w-14 h-10 flex-shrink-0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M 4 10 C 12 6, 30 4, 48 22 C 52 26, 54 32, 56 38" stroke="#ED7D31" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M 56 38 L 46 36 M 56 38 L 54 27" stroke="#ED7D31" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                <img src={qrCodeImage} alt="QR code to try TextMyApp" className="w-20 h-20 rounded-lg border border-slate-200 shadow-sm flex-shrink-0" />
               </div>
 
               <div className="flex flex-wrap items-center gap-5 mt-6 pt-8 border-t border-slate-100">
